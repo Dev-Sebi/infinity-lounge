@@ -8,8 +8,8 @@ const wait = require('util').promisify(setTimeout);
 const moment = require('moment');
 
 module.exports = {
-    name: "exampleslash",
-    description: "This is an example of a Slash Command",
+    name: "help",
+    description: "Need some help?",
     type: 1,
 
     /**
@@ -21,7 +21,7 @@ module.exports = {
     
     execute: async (client, interaction, args) => {
         
-        interaction.reply("Slash Command Example")
+        interaction.reply({content: "This Bot is currently in re-work!, please try again later!", ephemeral: true})
 
     },
 };
