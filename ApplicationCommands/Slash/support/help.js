@@ -25,15 +25,14 @@ module.exports = {
         const embed = new Discord.MessageEmbed()
             .setColor(colors.Blurple)
             .setTitle(`${client.emojis.cache.get(emojis.IconApplicationPending).toString()} What is ${client.user.username}?`)
-            .addField('**How does it work?**', `• ${client.user.username} is actively looking out for scamlinks and once detected, immediately deletes them, leaving your server behind secured and safe`, true)
-            .addField('**FAQ**', `• Does this bot have a Prefix?\n*No!, we completely use Slash commands!*`, false)
+            .addField('**What are the commands?**', '• You get a list of commands when typing "/" in the Chatbox and selecting the icon for Infinity Lounge.\n\n\n\n', false)
             .setTimestamp()
             .setFooter("• Made with heart by Sebi");
 
           let button = new Discord.MessageButton()
             .setLabel("Invite me!")
             .setStyle("LINK")
-            .setURL(`https://discord.com/oauth2/authorize?client_id=${client.user.id}&permissions=19327428608&scope=bot%20applications.commands`)
+            .setURL(`https://discord.com/oauth2/authorize?client_id=${client.user.id}&permissions=2147764224&scope=bot%20applications.commands`)
             .setEmoji(emojis.IconJoin);
 
           let button2 = new Discord.MessageButton()
