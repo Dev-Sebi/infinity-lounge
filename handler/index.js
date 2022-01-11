@@ -32,7 +32,7 @@ const globPromise = promisify(glob);
         // await client.application.commands.set(ArrayOfApplicationCommands); // if you want to update every guild the server is in (up to 1 hour for the update to complete)
         await client.guilds.cache.get("850690156582273054").commands.set(ArrayOfApplicationCommands); // if you want to update only one guild (instant update)
         console.log("Commands Loaded!")
-        client.user.setActivity("Currently in Rework!", { type: "PLAYING" });
+        client.user.setActivity("/help", { type: "PLAYING" });
         
     });
 };
