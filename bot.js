@@ -21,7 +21,7 @@ const express = require('express')
 const app = express()
 const port = 1001
 
-app.post('/stats', (req, res) => {
+app.get('/stats', (req, res) => {
   
   const format = `de`
   const servers = new Intl.NumberFormat(format).format(client.guilds.cache.size)
@@ -29,6 +29,7 @@ app.post('/stats', (req, res) => {
   const averageUsers = new Intl.NumberFormat(format).format(((client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)) / client.guilds.cache.size).toFixed(0))
   
   const json = {
+    bot: client.user.username,
     servers: servers,
     users: users,
     averageUsers: averageUsers,
