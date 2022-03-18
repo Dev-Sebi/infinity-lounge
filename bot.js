@@ -23,7 +23,7 @@ const port = 1026
 
 app.get('/stats', (req, res) => {
   
-  const format = `de`
+  const format = `en-US`
   const servers = new Intl.NumberFormat(format).format(client.guilds.cache.size)
   const users = new Intl.NumberFormat(format).format(client.guilds.cache.reduce((a, g) => a + g.memberCount, 0))
   const averageUsers = new Intl.NumberFormat(format).format(((client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)) / client.guilds.cache.size).toFixed(0))
